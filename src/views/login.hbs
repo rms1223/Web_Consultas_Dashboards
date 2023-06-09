@@ -1,0 +1,49 @@
+{{>head}}
+</head>
+
+<body class="login">
+  {{#if message}}
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-4 mx-auto">
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+  <div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper">
+      <div class="animate form login_form">
+        <section class="login_content">
+          <form method="POST" action="/login/">
+            <h1><img src="/static/images/fod-icon.png" width="32px" height="32px" />Ingreso</h1>
+            <div>
+              <input type="text" class="form-control" placeholder="Usuario" required="" name="username"/>
+            </div>
+            <div>
+              <input type="password" class="form-control" placeholder="Contraseña" required="" name="password"/>
+            </div>
+            <div>
+              <button class="btn btn-success submit form-control">Iniciar Sesión</button>
+            </div>
+            <div class="clearfix"></div>
+            <br />
+
+            <div>
+              <p>© RMS</p>
+            </div>
+      </div>
+      </form>
+      </section>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+#textconsole {
+    background-color: black;
+    color: white;
+    height: 30em;
+    font-size: 10px;
+}
+
+.tabs-dinamics {
+    margin-top: 5%;
+}
+
+#textoCE {
+    text-align: center;
+}
+
+.card {
+    width: 40rem;
+}
+
+.card_style {
+    padding-bottom: 20px;
+}
+
+#btnCredenciales {
+    float: right;
+}
+
+#imgMerakimodal {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    height: 80px;
+}
+
+#map {
+    height: 100%;
+}
+
+.window {
+    height: fit-content;
+    width: fit-content;
+    background-image: url("/static/icons/FOD2.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center right;
+}
+
+.centroseducativos_list {
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    bottom: 30vh;
+    width: fit-content;
+    border: 2px solid grey;
+    z-index: 5;
+    color: black;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.centroseducativos_list>h3 {
+    text-align: center;
+    padding: 0.8 rem;
+    border-bottom: 3px solid lightblue;
+}
+
+.centroseducativos_nombres {
+    flex: 1;
+    padding: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.centroseducativos_nombres>h4 {
+    padding: 5px;
+}
+
+.centroseducativos_nombres>h4:hover {
+    background-color: lightgray;
+}

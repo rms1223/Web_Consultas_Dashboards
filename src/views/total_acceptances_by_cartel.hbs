@@ -1,0 +1,53 @@
+{{>head}}
+<link href="/static/estilos.css" rel="stylesheet">
+</head>
+{{>body}}
+<div class="right_col" role="main">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 ">
+      <div class="x_panel">
+        <div class="x_title">
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            </li>
+          </ul>
+          <div class="container">
+            <div class="col-md-6 col-sm-12 offset-md-3 centered">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Total de Aceptaciones por Cartel</h2>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content text-center">
+                  <div class="btn-group ">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      Seleccionar Cartel
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" id="cartel">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+          <div class="col-md-12">
+            <div id="container" style="height: 70vh"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{{>footer}}
+<script src="/static/apirequestaceptacionescartel.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
+</body>
+
+</html>

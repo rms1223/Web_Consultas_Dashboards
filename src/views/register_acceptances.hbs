@@ -1,0 +1,145 @@
+{{>head}}
+
+
+<link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+<link href="/static/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+<link href="/static/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="/static/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+<link href="/static/estilos.css" rel="stylesheet">
+<link href="/static/toastr.min.css" rel="stylesheet">
+</head>
+{{>body}}
+<div class="right_col" role="main">
+  <div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+      <div class="x_title">
+        <ul class="nav navbar-right panel_toolbox">
+          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="container">
+          <div class="col-md-6 col-sm-12 offset-md-3 centered">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>Registrar Aceptacion</h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+
+                <form class="form-horizontal form-label-left" method="POST" action="#">
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Codigo Presupuestario</label>
+                    <div class="col-sm-9">
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="id" required="required" id="codigo">
+                        <span class="input-group-btn">
+                          <button type="submit" class="btn btn-primary btn_buscar"  style="margin-left:10px;">Buscar</button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Nombre del Centro Educativo</label>
+                    <div class="col-sm-9">
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="id" id="ce" readonly >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="cartel">Cartel:</label>
+                    <select id="cartel" class="form-control" required>
+                      <option value="">Selecionar Cartel....</option>
+                    </select>
+                  </div>
+                  <div class="form-group row">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" class="form-control" required>
+                      <option value="">Selecionar Estado....</option>
+                      <option value="Aceptado">Aceptado</option>
+                      <option value="No Aceptado">No Aceptado</option>
+                    </select>
+                  </div>
+                  <div class="form-group row">
+                    <label for="message">Descripcion:</label>
+                    <textarea id="message" required="required" class="form-control" name="message"
+                      data-parsley-trigger="keyup" data-parsley-maxlength="800"
+                      data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                      data-parsley-validation-threshold="10"></textarea>
+                    <label for="message">Caracteres (800 max) :</label>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-form-label col-md-3 col-sm-3 ">Fecha de Aceptación: <span class="required">*</span>
+											</label>
+											<div class="col-md-9 col-sm-9 ">
+												<input class="date-picker form-control" id="fecha" placeholder="dd-mm-yyyy" type="text" required="required" type="text" onfocus="this.type='date'" onmouseover="this.type='date'" onclick="this.type='date'" onblur="this.type='text'" onmouseout="timeFunctionLong(this)">
+												<script>
+													function timeFunctionLong(input) {
+														setTimeout(function() {
+															input.type = 'text';
+														}, 60000);
+													}
+												</script>
+											</div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Nombre Tecnico</label>
+                    <div class="col-sm-9">
+                      <div class="input-group">
+                        <input type="text" class="form-control" id="tecnico" required="required">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="copiacorreo">Enviar Copia:</label>
+                    <select id="copiacorreo" class="form-control" required>
+                      <option value="">Selecionar Correo....</option>
+                    </select>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-9">
+                        <button type="submit" class="btn btn-primary enviar">Enviar</button>
+                    </div>
+                      
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card-box table-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{>footer}}
+<script src="/static/dataaceptaciones.js"></script>
+<script src="/static/sendmaildata.js"></script>
+<script src="/static/toastr.min.js"></script>
+<script src="/static/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/static/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="/static/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/static/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="/static/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="/static/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="/static/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="/static/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="/static/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="/static/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="/static/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="/static/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="/static/vendors/jszip/dist/jszip.min.js"></script>
+<script src="/static/vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="/static/vendors/pdfmake/build/vfs_fonts.js"></script>
+</body>
+
+</html>

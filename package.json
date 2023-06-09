@@ -1,0 +1,33 @@
+{
+    "name": "proyectowebfod",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.4",
+        "bcrypt-nodejs": "0.0.3",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "colors": "^1.4.0",
+        "connect-flash": "^0.1.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.1.4",
+        "express": "^4.17.1",
+        "express-handlebars": "^5.3.5",
+        "express-session": "^1.17.1",
+        "express-validator": "^6.10.0",
+        "hbs": "^4.1.2",
+        "mongodb": "^4.0.1",
+        "morgan": "^1.10.0",
+        "passport": "^0.6.0",
+        "passport-local": "^1.0.0",
+        "promise-mysql": "^5.0.1",
+        "yargs": "^16.2.0"
+    }
+}
